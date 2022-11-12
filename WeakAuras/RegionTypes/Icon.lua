@@ -397,6 +397,8 @@ local function modify(parent, region, data)
     cooldown:SetHideCountdownNumbers(cooldownTextDisabled);
     if OmniCC and OmniCC.Cooldown and OmniCC.Cooldown.SetNoCooldownCount then
       OmniCC.Cooldown.SetNoCooldownCount(cooldown, cooldownTextDisabled)
+    elseif tullaCC and tullaCC.Cooldown and tullaCC.Cooldown.SetNoCooldownCount then
+      tullaCC.Cooldown.SetNoCooldownCount(cooldown, cooldownTextDisabled)
     elseif ElvUI and ElvUI[1] and ElvUI[1].CooldownEnabled
            and ElvUI[1].ToggleCooldown and ElvUI[1]:CooldownEnabled()
     then
